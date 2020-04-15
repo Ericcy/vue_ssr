@@ -28,6 +28,21 @@ module.exports = {
       {
         test: /\.vue$/,
         use: 'vue-loader'
+      },
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: [
+              ["@babel/plugin-proposal-decorators", { "legacy": true }],
+              ["@babel/plugin-proposal-class-properties", { "loose": true }]
+              ["@babel/plugin-transform-runtime"]
+            ]
+          }
+        },
+        exclude: /node_modules/
       }
     ]
   }
