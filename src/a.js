@@ -1,4 +1,4 @@
-module.exports = 'dfdf'
+export default 'dfdf'
 class b{
   b = 12
 }
